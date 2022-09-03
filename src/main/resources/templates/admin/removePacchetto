@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>  	
+	<meta charset="ISO-8859-1" />
+		<title>Rimuovi pacchetto</title>
+		<link rel="stylesheet" th:href="@{/css/my-style.css}"/>
+		<link rel="stylesheet" th:href="@{/css/elenchi.css}"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+</head> 
+
+<body>
+	<header th:replace="fragments/base.html :: intestazione"></header>	
+	<div id="container">
+		<div id="section">
+			<div>
+				<div>
+					<h3>Sei sicuro di voler eliminare il pacchetto <span th:text="${pacchetto.nome}">Pacchetto</span>?</h3>
+					<div>Descrizione: <span  th:text="${pacchetto.descrizione}">Descrizione</span></div>
+				</div>	
+				<div class="section-item" th:if="${!pacchetto.sport.empty}"><strong>Sport presenti nel pacchetto:</strong>
+					<ul>
+						<li th:each="sport: ${pacchetto.sport}">
+							<a href="sport.html" th:href="@{'/sport' + '/' + ${sport.id}}"
+							   th:text="${sport.nome}">Sport</a>
+						</li>	   	
+					</ul>
+				</div>
+				<div>
+					<a class="section-item" id="button" th:href="@{'/admin' + '/confermaRemovePacchetto' + '/' + ${pacchetto.id}}">Conferma</a>
+				</div>
+			</div>
+			<img src="/images/allenatore.jpg"></img>
+		</div>
+	</div>
+
+</body>
+
+</html>

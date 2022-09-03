@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>  	
+	<meta charset="ISO-8859-1" />
+		<title>Aggiungi Sport</title>
+		<link rel="stylesheet" th:href="@{/css/my-style.css}"/>
+		<link rel="stylesheet" th:href="@{/css/elenchi.css}"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+</head> 
+
+<body>
+	<header th:replace="fragments/base.html :: intestazione"></header>	
+	<div id="container">
+		<div id="section">
+			<div>
+				<div>
+					<h1 th:text="${pacchetto.nome}">Pacchetto</h1>
+					<div>Descrizione: <span  th:text="${pacchetto.descrizione}">Descrizione</span></div>
+				</div>	
+				<div class="section-item" th:if="${!pacchetto.sport.empty}"><strong>Sport presenti nel Pacchetto:</strong>
+					<ul>
+						<li th:each="sport: ${pacchetto.sport}">
+							<a href="sport.html" th:href="@{'/sport' + '/' + ${sport.id}}"
+							   th:text="${sport.nome}">Sport</a>
+						</li>	   	
+					</ul>
+				</div>
+				
+				<div class="section-item" th:if="${!sportAssenti.empty}"><strong>Vuoi aggiungere uno dei seguenti sport al pacchetto?</strong>
+					<ul>
+						<li th:each="sport: ${sportAssenti}">
+							<a href="sport.html" th:href="@{'/sport' + '/' + ${sport.id}}"
+							   th:text="${sport.nome}">Sport</a>
+							<a href="#" th:href="@{'/admin' + '/pacchetto' + '/' + ${pacchetto.id} + '/' + ${sport.id}}">
+							<span id="select">Aggiungi al pacchetto</span></a>
+						</li>	   	
+					</ul>
+				</div>
+				<div>
+					<a class="section-item" id="button" href="pacchetto.html" th:href="@{'/pacchetto' + '/' + ${pacchetto.id}}">Conferma</a>
+				</div>
+			</div>
+			<img src="/images/allenatore.jpg"></img>
+		</div>
+	</div>
+
+</body>
+
+</html>

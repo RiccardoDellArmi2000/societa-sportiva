@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>  	
+		<meta charset="ISO-8859-1" />
+		<title>Allenatore</title>
+		<link rel="stylesheet" th:href="@{/css/elenchi.css}"/>
+		<link rel="stylesheet" th:href="@{/css/my-style.css}"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head> 
+
+	<body>
+		<header th:replace="fragments/base.html :: intestazione"></header>		
+		
+		<div id="container">
+			<div th:if="${allenatore != null}"><h1>Pacchetti degli allenatori <span th:text="${allenatore.nome} + ' ' + ${allenatore.cognome}"></span></h1></div>
+			<div th:if="${allenatore == null}"><h1>I nostri Pacchetti</h1></div>
+			<div id="section">
+					<ul id="elenco">
+						<li th:each="pacchetto: ${pacchetti}">
+							<span>
+								<a href="pacchetto.html" th:href="@{'/pacchetto' + '/' + ${pacchetto.id}}"
+						   		th:text="${pacchetto.nome}">Pacchetto 1</a>
+						   	</span>
+						   	<span>
+								<a href="pacchetto.html" th:href="@{'/pacchetto' + '/' + ${pacchetto.id}}"
+						   		th:text="${pacchetto.nome}">Pacchetto 2</a>
+						   	</span>
+						</li>	   	
+					</ul>
+				<img src="/images/pacchetto2.jpg"></img>
+			</div>
+		</div>
+	</body>
+
+</html>

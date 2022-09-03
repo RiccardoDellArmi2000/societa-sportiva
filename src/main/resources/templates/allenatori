@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="ISO-8859-1" />
+		<title>Allenatore</title>
+		<link rel="stylesheet" th:href="@{css/elenchi.css}"/>
+		<link rel="stylesheet" th:href="@{css/my-style.css}"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+	<body>
+		<header th:replace="fragments/base.html :: intestazione"></header>		
+		<div id="container">
+			<div><h1>I nostri Allenatori</h1></div>
+			<div id="section">
+					<ul id="elenco">
+						<li th:each="allenatore: ${allenatori}">
+							<span>
+								<a href="allenatore.html" th:href="@{'/allenatore' + '/' + ${allenatore.id}}"
+						   		th:text="${allenatore.nome} + ' ' + ${allenatore.cognome}">Paolo Rossi</a>
+						   	</span>
+						</li>	   	
+					</ul>
+				<img src="images/allenatore.jpg"></img>
+			</div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="ISO-8859-1 />
+		<title>Dettagli Sport</title>
+		<link rel="stylesheet" th:href="@{/css/my-style.css}"/>
+		<link rel="stylesheet" th:href="@{/css/descrizioni.css}"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	
+	<body>
+		<header th:replace="fragments/base.html :: intestazione"></header>
+		<div id="sfondo-piatto"></div>
+		<div id="section">
+			<div class="section-item">
+				<div><strong>Nome: </strong>
+				<span th:text="${sport.nome}">Sport</span></div>
+				<div><strong>Descrizione: </strong>
+				<span th:text="${sport.descrizione}">Descrizione</span></div>
+			</div>
+			
+			<div class="section-item" th:if="${!sport.accessori.empty}">Lista accessori:
+				<ul>
+					<li th:each="accessori: ${sport.accessori}">
+						<a href="accessori.html" th:href="@{'/accessori' + '/' + ${accessori.id}}"
+							th:text="${accessori.nome}">Sport</a>
+					</li>
+				</ul
+			</div>
+		</div>
+	</body>
+
+</html>

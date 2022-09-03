@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	
+	<head>
+		<meta charset="ISO-8859-1" />
+		<title>Dettagli Accessorio</titl>
+		<link rel="stylesheet" th:href="@{/css/my-style.css}"/>
+		<link rel="stylesheet" th:href="@{/css/descrioni.css}"/>
+		<meta name="viewport" content="width=device-width=device-width, initial-scale=1">
+	</head>
+	
+	<body>
+		<header th:replace="fragments/base.html :: intestazione"></header>
+		<div id="sfondo-accessorio"></div>
+		
+		<div id="section">
+				<div><strong>Nome: </strong>
+				<span th:text="${accessorio.nome}">Accessorio</span></div>
+				<div><strong>Descrizione: </strong>
+				<span th:text="${accessorio.descrizione}">Descrizione</span></div>
+		</div>
+	</body>
+
+</html>
