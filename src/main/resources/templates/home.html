@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" />
+<title>Pacchetto Sportivo</title>
+<link rel="stylesheet" th:href="@{css/my-style.css}" />
+<link rel="stylesheet" th:href="@{css/home.css}" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<header th:replace="fragments/base.html :: intestazione"></header>
+	<div id="text-section">
+		<div id="servizi">
+			<a name="servizi">
+				<div class="text-item">
+					<div id="bottoni">
+						<div class="button">
+							<a th:href="@{/chefs}">I nostri allenatori</a>
+						</div>
+						<div class="button">
+							<a th:href="@{/buffets}">I nostri pacchetti</a>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+
+	</div>
+</body>
+
+</html>

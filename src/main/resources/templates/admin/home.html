@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" />
+<title>Societa' Sportiva</title>
+<link rel="stylesheet" th:href="@{/css/my-style.css}" />
+<link rel="stylesheet" th:href="@{/css/home.css}" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<header th:replace="fragments/base.html :: intestazione"></header>
+	<div id="text-section">
+		<div id="admin">
+			<div id="bottoni">
+				<div class="button">
+					<a th:href="@{/allenatori}">Allenatori</a>
+				</div>
+				<div class="button">
+					<a th:href="@{/pacchetti}">Pacchetti</a>
+				</div>
+			</div>
+			<div class="text-item">
+				<h3>ADMIN MODE</h3>
+				<h2>
+					<a th:href="@{/admin/allenatoreForm}">Aggiungi Allenatore</a>
+				</h2>
+				<h2>
+					<a th:href="@{/admin/sportForm}">Aggiungi sport</a>
+				</h2>
+				<h2>
+					<a th:href="@{/admin/pacchetti/addPacchetto}">Aggiungi pacchetto</a>
+				</h2>
+				<h2>
+					<a th:href="@{/admin/editPacchetto}">Modifica pacchetto</a>
+				</h2>
+				<h2>
+					<a th:href="@{/admin/removePacchetto}">Rimuovi pacchetto</a>
+				</h2>
+			</div>
+		</div>
+
+	</div>
+</body>
+
+</html>

@@ -6,25 +6,25 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 		<link th:href="@{/css/my-style.css}" rel="stylesheet">
-		<title>Catering</title>
+		<title>Societa Sportiva</title>
 	</head>
 	<body>
 		<header th:fragment="intestazione">
 			<nav>
 				<div id="logo">
-					<a href="http://localhost:8090">Prenotazione Pacchetti Sportivi</a>
+					<a href="http://localhost:8090">Societa Sportiva</a>
 				</div>
 				<ul id="navigation">
 					<li class="nav-item"><a th:href="@{/home}">Home</a></li>
-					<li class="nav-item"><a th:href="@{/allenatori}">Allenatori</a></li>
+					<li class="nav-item"><a th:href="@{/allenatore}">Allenatori</a></li>
 					<li class="nav-item"><a th:href="@{/pacchetti}">Pacchetti</a></li>
 					<li class="nav-item"><a th:href="@{/logout}">Logout</a></li>
 				</ul>
 			</nav>
 		</header>
-		<div th:fragment="sfondo1" id="sfondo1></div>
-		<div th:fragment="sfondo2" id="sfondo2></div>
-		<div th:fragment="sfondo3" id="sfondo3></div>	
-	
+		<div th:fragment="sfondo1" id="sfondo1"></div>
+		<div th:fragment="sfondo2" id="sfondo2"></div>
+		<div th:fragment="sfondo3" id="sfondo3"></div>
+		
 	</body>
 </html>
