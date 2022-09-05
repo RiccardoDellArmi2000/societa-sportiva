@@ -48,15 +48,15 @@ public class AuthenticationController {
 	}
 	
 	@PostMapping("/register")
-	public String newUser(@Validated @ModelAttribute(value="credentials") Credentials credentials,
-			BindingResult userBindigResult, @Validated @ModelAttribute(value="user") User user,
+	public String newUser(@Validated @ModelAttribute(value = "credentials") Credentials credentials,
+			BindingResult userBindingResult, @Validated @ModelAttribute(value = "user") User user,  
 			BindingResult credentialsBindingResult, Model model) {
-		this.userValidator.validate(user, userBindigResult);
+		this.userValidator.validate(user, userBindingResult);
 		this.credentialsValidator.validate(credentials, credentialsBindingResult);
-		if(!userBindigResult.hasErrors() && !credentialsBindingResult.hasErrors()) {
+		if(!userBindingResult.hasErrors() && !credentialsBindingResult.hasErrors()) {
 			credentials.setUser(user);
-			credentialsService.saveCredentials(credentials);
-			return "registrationSuccessful.html";
+            credentialsService.saveCredentials(credentials);
+            return "registrationSuccessful.html";
 		}
 		return "registerUser.html";
 	}
