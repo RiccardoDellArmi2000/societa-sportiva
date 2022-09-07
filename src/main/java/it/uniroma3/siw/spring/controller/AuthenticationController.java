@@ -20,22 +20,22 @@ import it.uniroma3.siw.spring.service.CredentialsService;
 @Controller
 public class AuthenticationController {
 	
+	
 	@Autowired
 	private CredentialsService credentialsService;
 	
 	@Autowired
 	private UserValidator userValidator;
 	
-	@Autowired 
+	@Autowired
 	private CredentialsValidator credentialsValidator;
 	
-
 	@GetMapping("/login")
 	public String getLoginPage(Model model) {
 		return "loginForm.html";
 	}
 	
-	@GetMapping("/logout")
+	@GetMapping("/logout") 
 	public String logout(Model model) {
 		return "index.html";
 	}
@@ -61,21 +61,24 @@ public class AuthenticationController {
 		return "registerUser.html";
 	}
 	
-	@GetMapping("/default")
-	public String defaultAfterLogin(Model model) {
-		UserDetails userDetails = (UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		Credentials credentials = credentialsService.getCredentials(userDetails.getUsername());
-		if(credentials.getRole().equals(Credentials.ADMIN_ROLE)) 
-			return "admin/home.html";
-		return "home.html";
-	}
-	
+    @GetMapping("/default")
+    public String defaultAfterLogin(Model model) {
+    	UserDetails userDetails = (UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+    	Credentials credentials = credentialsService.getCredentials(userDetails.getUsername());
+    	if (credentials.getRole().equals(Credentials.ADMIN_ROLE)) {
+            return "admin/home.html";
+        }
+        return "home.html";
+    }
+    
+
 	@GetMapping("/home")
 	public String homePage(Model model) {
 		UserDetails userDetails = (UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		Credentials credentials = credentialsService.getCredentials(userDetails.getUsername());
-		if(credentials.getRole().equals(Credentials.ADMIN_ROLE))
-			return "admin/home.html";
-		return "home.html";
+    	Credentials credentials = credentialsService.getCredentials(userDetails.getUsername());
+    	if (credentials.getRole().equals(Credentials.ADMIN_ROLE)) {
+            return "admin/home.html";
+        }
+        return "home.html";
 	}
 }
