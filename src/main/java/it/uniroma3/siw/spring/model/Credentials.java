@@ -5,6 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+
+import net.bytebuddy.asm.Advice.This;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 
@@ -30,13 +33,14 @@ public class Credentials {
 	@OneToOne(cascade = CascadeType.ALL)
 	private User user;
 
-	public Credentials() {}
+	public Credentials() {
+		this.user= new User();
+	}
 	
-	public Credentials(String username, String password, String role, User user) {
+	public Credentials(String username, String password, String role) {
 		this.username = username;
 		this.password = password;
 		this.role = role;
-		this.user = user;
 	}
 	
 	public Long getId() {
