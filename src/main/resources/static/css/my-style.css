@@ -12,6 +12,9 @@ a {
 
 li {
 	list-style: none;
+	font-family: 'Arial';
+	font-size: 12px;
+	
 }
 
 nav {

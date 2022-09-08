@@ -12,15 +12,10 @@
 	<body>
 		<header th:replace="fragments/base.html :: intestazione"></header>		
 		<div id="container">
-			<div><h1>I nostri Allenatori</h1></div>
+			<div><h1>I nostri Allenatori: </h1></div>
 			<div id="section">
 					<ul id="elenco">
-						<li th:each="allenatore: ${allenatori}">
-							<span>
-								<a href="allenatore.html" th:href="@{'/allenatore' + '/' + ${allenatore.id}}"
-						   		th:text="${allenatore.nome} + ' ' + ${allenatore.cognome}"> - Paolo Rossi</a>
-						   	</span>
-						</li>	   	
+						<a href="/fragments/allenatore.html">- Paolo Rossi</a>	   	
 					</ul>
 				<img src="images/allenatore.jpg"></img>
 			</div>
