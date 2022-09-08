@@ -12,7 +12,7 @@
 	<artifactId>siw-spring-security</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>siw-spring-security</name>
-	<description>Demo project for Spring Boot and Security</description>
+	<description>Demo project for corsi sportivi</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -58,6 +58,7 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
 	</dependencies>
 
 	<build>
