@@ -1,21 +1,22 @@
 #container {
-	position: absolute;
-	margin: 50px;
-	display: flex;
-	flex-direction: column;
-	padding: 100px;
-	text-align: center;
-	background-color: #d5ffff;
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 200px;
+	background-color: #ff8040;
+	opacity: 0.8;
+	border-radius: 7px;
+	padding: 50px;
 }
 
 #section {
-	margin: 30px;
+	margin: 150px;
 	display: flex;
 	justify-content: space-between;
 }
 
 img {
-	width: 35%;
+	width: 120%;
 	position: relative;
 	border-radius: 7px;
 }

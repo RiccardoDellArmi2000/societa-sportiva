@@ -18,7 +18,7 @@
 						<li th:each="allenatore: ${allenatori}">
 							<span>
 								<a href="allenatore.html" th:href="@{'/allenatore' + '/' + ${allenatore.id}}"
-						   		th:text="${allenatore.nome} + ' ' + ${allenatore.cognome}">Paolo Rossi</a>
+						   		th:text="${allenatore.nome} + ' ' + ${allenatore.cognome}"> - Paolo Rossi</a>
 						   	</span>
 						</li>	   	
 					</ul>
