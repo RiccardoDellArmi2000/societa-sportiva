@@ -16,9 +16,9 @@ public class CredentialsValidator implements Validator {
 	private CredentialsService credentialsService;
 	
 	final Integer MAX_USERNAME_LENGHT = 20;
-	final Integer MIN_USERNAME_LENGHT = 6;
+	final Integer MIN_USERNAME_LENGHT = 1;
 	final Integer MAX_PASSWORD_LENGHT = 20;
-	final Integer MIN_PASSWORD_LENGHT = 6;
+	final Integer MIN_PASSWORD_LENGHT = 1;
 	
 	@Override
 	public boolean supports(Class<?> clazz) {
