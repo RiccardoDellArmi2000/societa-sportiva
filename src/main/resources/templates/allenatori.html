@@ -15,7 +15,16 @@
 			<div><h1>I nostri Allenatori: </h1></div>
 			<div id="section">
 					<ul id="elenco">
+<<<<<<< Updated upstream
 						<a href="/fragments/allenatore.html">- Paolo Rossi</a>	   	
+=======
+						<li th:each="allenatore: ${allenatori}">
+							<span>
+								<a href="allenatore.html" th:href="@{'/allenatore' + '/' + ${allenatore.id}}"
+						   		th:text="${allenatore.nome} + ' ' + ${allenatore.cognome}">Paolo Rossi</a>
+						   	</span>
+						</li>   	
+>>>>>>> Stashed changes
 					</ul>
 				<img src="images/allenatore.jpg"></img>
 			</div>
