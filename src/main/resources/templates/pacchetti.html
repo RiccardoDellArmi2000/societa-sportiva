@@ -18,14 +18,14 @@
 			<div id="section">
 					<ul id="elenco">
 						<li th:each="pacchetto: ${pacchetti}">
-							<span>
+							<nav>
 								<a href="pacchetto.html" th:href="@{'/pacchetto' + '/' + ${pacchetto.id}}"
 						   		th:text="${pacchetto.nome}">Pacchetto 1</a>
-						   	</span>
-						   	<span>
+						   	</nav>
+						   	<nav>
 								<a href="pacchetto.html" th:href="@{'/pacchetto' + '/' + ${pacchetto.id}}"
 						   		th:text="${pacchetto.nome}">Pacchetto 2</a>
-						   	</span>
+						   	</nav>
 						</li>	   	
 					</ul>
 				<img src="/images/pacchetto2.jpg"></img>

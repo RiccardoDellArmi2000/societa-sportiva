@@ -14,7 +14,8 @@ a {
 }
 
 li {
-	list-style: none;
+	
+	list-style-type: circle;
 	font-family: 'Arial';
 	font-size: 25px;
 	text-align: left;

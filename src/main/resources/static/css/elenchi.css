@@ -12,17 +12,19 @@
 #section {
 	margin: 150px;
 	display: flex;
-	justify-content: space-between;
+	
+	
 }
 
 img {
-	width: 120%;
+	width: 150%;
 	position: relative;
 	border-radius: 7px;
 }
 
 #elenco {
 	font-size: 50px;
+	justify-content: space-around;
 }
 
 #select {
