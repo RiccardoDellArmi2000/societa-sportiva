@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 	<head>  	
-		<meta charset="ISO-8859-1" />
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 		<title>Allenatore</title>
 		<link rel="stylesheet" th:href="@{/css/elenchi.css}"/>
 		<link rel="stylesheet" th:href="@{/css/my-style.css}"/>
@@ -18,14 +18,9 @@
 			<div id="section">
 					<ul id="elenco">
 						<li th:each="pacchetto: ${pacchetti}">
-							<nav>
-								<a href="pacchetto.html" th:href="@{'/pacchetto' + '/' + ${pacchetto.id}}"
-						   		th:text="${pacchetto.nome}">Pacchetto 1</a>
-						   	</nav>
-						   	<nav>
-								<a href="pacchetto.html" th:href="@{'/pacchetto' + '/' + ${pacchetto.id}}"
-						   		th:text="${pacchetto.nome}">Pacchetto 2</a>
-						   	</nav>
+							<li th:each="pacchetto : ${pacchetti}"><a href="#"
+							th:href="@{'/pacchetto' + '/' + ${pacchetto.id}}"
+							th:text="${pacchetto.nome}">Premium</a>
 						</li>	   	
 					</ul>
 				<img src="/images/pacchetto2.jpg"></img>

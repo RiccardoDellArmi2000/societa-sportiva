@@ -24,7 +24,7 @@ public class SportController {
 	private SportValidator sportValidator;
 	
 	@GetMapping("sport/{sportId}")
-	public String getSport(@PathVariable("piattoId") Long id, Model model) {
+	public String getSport(@PathVariable("sportId") Long id, Model model) {
 		model.addAttribute("sport", this.sportService.findById(id));
 		return "sport.html";
 	}
