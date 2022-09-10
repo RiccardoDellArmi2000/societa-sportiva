@@ -18,9 +18,14 @@
 		<div id="section">
 			<ul id="elenco">
 
-				<li><a href="allenatore.html">Paolo Rossi</a></li>
+				<li th:each="allenatore : ${allenatori}"><a href="#"
+					th:href="@{'/allenatore' + '/' + ${allenatore.id}}"
+					th:text="${allenatore.nome}">Paolo Rossi</a></li>
+
+
+
 			</ul>
-		</div>
+
 		<img src="images/allenatore.jpg"></img>
 
 	</div>

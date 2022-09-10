@@ -14,7 +14,7 @@
 		<div th:replace="fragments/base.html :: sfondo3"></div>
 	
 		<div id="text">
-			<form id="form" th:action="@{/admin/allenatore}" method="POST" th:object="${chef}">
+			<form id="form" th:action="@{/admin/allenatore}" method="POST" th:object="${allenatore}">
 				<div><h3>Inserisci nuovo allenatore</h3></div>
 				<div th:if="${#fields.hasGlobalErrors()}">
 				    <p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p> 
