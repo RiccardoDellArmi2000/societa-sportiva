@@ -13,7 +13,7 @@
 		<header th:replace="fragments/base.html :: intestazione"></header>		
 		
 		<div id="container">
-			<div th:if="${allenatore != null}"><h1>Pacchetti degli allenatori <span th:text="${allenatore.nome} + ' ' + ${allenatore.cognome}"></span></h1></div>
+			<div th:if="${allenatore != null}"><h1>Pacchetti dell'allenatore <span th:text="${allenatore.nome} + ' ' + ${allenatore.cognome}"></span></h1></div>
 			<div th:if="${allenatore == null}"><h1>I nostri Pacchetti</h1></div>
 			<div id="section">
 					<ul id="elenco">
