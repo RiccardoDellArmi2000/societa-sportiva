@@ -60,7 +60,7 @@ public class AllenatoreController {
 		return "admin/allenatoreForm.html";
 	}
 	
-	@GetMapping("/admin/allenatori/addPacchetto")
+	@GetMapping("/admin/pacchetti/addPacchetto")
 	public String addPacchetto(Model model) {
 		model.addAttribute("allenatori", allenatoreService.findAll());
 		return "admin/selezionaAllenatore.html";

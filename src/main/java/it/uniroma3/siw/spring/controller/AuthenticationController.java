@@ -48,8 +48,8 @@ public class AuthenticationController {
 	}
 	
 	@PostMapping("/register")
-	public String newUser(@Validated @ModelAttribute(value = "credentials") Credentials credentials,
-			BindingResult userBindingResult, @Validated @ModelAttribute(value = "user") User user,  
+	public String newUser( @ModelAttribute(value = "credentials") Credentials credentials,
+			BindingResult userBindingResult, @ModelAttribute(value = "user") User user,  
 			BindingResult credentialsBindingResult, Model model) {
 		this.userValidator.validate(user, userBindingResult);
 		this.credentialsValidator.validate(credentials, credentialsBindingResult);

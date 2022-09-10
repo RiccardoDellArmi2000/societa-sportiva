@@ -37,7 +37,7 @@ public class SportController {
 	}
 	
 	@PostMapping("/admin/sport")
-	public String addSport(@Validated @ModelAttribute(value="allenatore") Sport sport,
+	public String addSport(@ModelAttribute(value="sport") Sport sport,
 			BindingResult bindingResult, Model model) {
 		this.sportValidator.validate(sport, bindingResult);
 		if(!bindingResult.hasErrors()) {
@@ -47,7 +47,7 @@ public class SportController {
 		}
 		else {
 			model.addAttribute("sport", sport);
-			return "admin/allenatoreForm.html";
+			return "admin/sportForm.html";
 		}
 	}
 }

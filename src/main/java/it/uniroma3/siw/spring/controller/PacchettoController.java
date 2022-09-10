@@ -101,10 +101,10 @@ public class PacchettoController {
 		return "admin/editPacchetto.html";
 	}
 	
-	@GetMapping("/admin/editBuffet")
-	public String chooseBuffetToEdit(Model model) {
-		model.addAttribute("buffets", pacchettoService.findAll());
-		return "admin/selectBuffetToEdit.html";
+	@GetMapping("/admin/editPacchetto")
+	public String choosePacchettoToEdit(Model model) {
+		model.addAttribute("pacchetti", pacchettoService.findAll());
+		return "admin/selectPacchettoToEdit.html";
 	}
 	
 	@GetMapping("/admin/editPacchetto/{pacchettoId}")

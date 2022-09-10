@@ -22,11 +22,6 @@
 					   		th:text="${pacchetto.nome}">Pacchetto 1</a>
 					   		<a th:href="@{'/admin' + '/removePacchetto' + '/' + ${pacchetto.id}}"><span id="select">Remove</span></a>
 					   	</span>
-					   	<span>
-							<a href="pacchetto.html" th:href="@{'/pacchetto' + '/' + ${pacchetto.id}}"
-					   		th:text="${pacchetto.nome}">Pacchetto 2</a>
-					   		<a th:href="@{'/admin' + '/removePacchetto' + '/' + ${pacchetto.id}}"><span id="select">Remove</span></a>
-					   	</span>
 					</li>	   	
 				</ul>
 				<img src="/images/allenatore.jpg"></img>

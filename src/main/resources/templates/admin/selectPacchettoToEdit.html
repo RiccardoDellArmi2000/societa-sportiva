@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 	<head>  	
-		<meta charset="ISO-8859-1" />
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 		<title>Pacchetto</title>
 		<link rel="stylesheet" th:href="@{/css/elenchi.css}"/>
 		<link rel="stylesheet" th:href="@{/css/my-style.css}"/>
@@ -20,11 +20,6 @@
 						<span>
 							<a href="pacchetto.html" th:href="@{'/pacchetto' + '/' + ${pacchetto.id}}"
 					   		th:text="${pacchetto.nome}">Pacchetto 1</a>
-					   		<a th:href="@{'/admin' + '/editPacchetto' + '/' + ${pacchetto.id}}"><span id="select">Modifica</span></a>
-					   	</span>
-					   	<span>
-							<a href="pacchetto.html" th:href="@{'/pacchetto' + '/' + ${pacchetto.id}}"
-					   		th:text="${pacchetto.nome}">Pacchetto 2</a>
 					   		<a th:href="@{'/admin' + '/editPacchetto' + '/' + ${pacchetto.id}}"><span id="select">Modifica</span></a>
 					   	</span>
 					</li>	   	

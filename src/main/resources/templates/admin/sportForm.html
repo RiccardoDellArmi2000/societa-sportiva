@@ -17,7 +17,7 @@
 			<form id="form" th:action="@{/admin/sport}" method="POST" th:object="${sport}">
 				<div><h3>Inserisci un nuovo Sport</h3></div>
 				<div th:if="${#fields.hasGlobalErrors()}">
-				    <p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p> 
+				    <p th:each="err : ${#fields.hasGlobalErrors()}" th:text="${err}">...</p> 
 				</div>
 				<div class="form-item">
 					<div>Nome: </div>
