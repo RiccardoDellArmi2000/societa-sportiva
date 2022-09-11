@@ -1,7 +1,5 @@
 package it.uniroma3.siw.authentication;
 
-import static it.uniroma3.siw.spring.model.Credentials.ADMIN_ROLE;
-//import static it.uniroma3.siw.spring.model.Credentials.DEFAULT_ROLE;
 
 import javax.sql.DataSource;
 
