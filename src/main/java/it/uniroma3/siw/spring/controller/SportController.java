@@ -15,26 +15,31 @@ import it.uniroma3.siw.spring.service.SportService;
 
 @Controller
 public class SportController {
-	
+
 	@Autowired
 	private SportService sportService;
-	
+
 	@Autowired
 	private SportValidator sportValidator;
-	
+
 	@GetMapping("sport/{sportId}")
 	public String getSport(@PathVariable("sportId") Long id, Model model) {
 		model.addAttribute("sport", this.sportService.findById(id));
 		return "sport.html";
 	}
-	
+	@GetMapping("/sports")
+	public String getSports(Model model) {
+		model.addAttribute("sports", sportService.findAll());
+		return "sports.html";
+	}
+
 	@GetMapping("/admin/sportForm")
 	public String sportForm(Model model) {
 		Sport s = new Sport();
 		model.addAttribute("sport", s);
 		return "admin/sportForm.html";
 	}
-	
+
 	@PostMapping("/admin/sport")
 	public String addSport(@ModelAttribute(value="sport") Sport sport,
 			BindingResult bindingResult, Model model) {

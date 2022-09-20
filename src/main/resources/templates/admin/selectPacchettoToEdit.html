@@ -17,7 +17,10 @@
 			<div id="section">
 				<ul id="elenco">
 					<li th:each="pacchetto: ${pacchetti}">
-						<span>
+						<span> 
+						
+						<!-- seleziono il pacchetto da modificare -->
+						
 							<a href="pacchetto.html" th:href="@{'/pacchetto' + '/' + ${pacchetto.id}}"
 					   		th:text="${pacchetto.nome}">Pacchetto 1</a>
 					   		<a th:href="@{'/admin' + '/editPacchetto' + '/' + ${pacchetto.id}}"><span id="select">Modifica</span></a>

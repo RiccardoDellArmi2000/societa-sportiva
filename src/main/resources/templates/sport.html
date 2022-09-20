@@ -20,14 +20,7 @@
 				<span th:text="${sport.descrizione}">Descrizione</span></div>
 			</div>
 			
-			<div class="section-item" th:if="${!sport.accessori.empty}">Lista accessori:
-				<ul>
-					<li th:each="accessori: ${sport.accessori}">
-						<a href="accessori.html" th:href="@{'/accessori' + '/' + ${accessori.id}}"
-							th:text="${accessori.nome}">Sport</a>
-					</li>
-				</ul>
-			</div>
+			
 		</div>
 	</body>
 

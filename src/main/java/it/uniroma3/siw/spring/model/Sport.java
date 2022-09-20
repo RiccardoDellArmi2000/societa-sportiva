@@ -21,17 +21,15 @@ public class Sport {
 	
 	private String descrizione;
 	
-	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-	private List<Accessorio> accessori;
+	
 	
 	public Sport() {
-		this.accessori = new ArrayList<>();
 	}
 	
-	public Sport(String nome, String descrizione, List<Accessorio> accessori) {
+	public Sport(String nome, String descrizione) {
 		this.nome = nome;
 		this.descrizione = descrizione;
-		this.accessori = accessori;
+		
 	}
 
 	public Long getId() {
@@ -57,14 +55,6 @@ public class Sport {
 	public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
 	}
-
-	public List<Accessorio> getAccessori() {
-		return accessori;
-	}
-
-	public void setAccessori(List<Accessorio> accessori) {
-		this.accessori = accessori;
-	}
 	
 	@Override
 	public int hashCode() {
@@ -81,14 +71,7 @@ public class Sport {
 	
 	@Override
 	public String toString() {
-		return this.getNome() + " " + this.getAccessori();
+		return this.getNome();
 	}
 
-	public void addAccessorio(Accessorio accessorio) {
-		this.accessori.add(accessorio);
-	}
-
-	public void removeAccessorio(Accessorio accessorio) {
-		this.accessori.remove(accessorio);
-	}
 }

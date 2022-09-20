@@ -111,5 +111,9 @@ public class PacchettoService {
 		allenatoreService.removePacchettoFromAllenatore(pacchetto.getAllenatore(), pacchetto);
 		this.delete(pacchetto);
 	}
+
+	public Long getNumeroPacchetti() {
+		return this.pacchettoRepository.count();
+	}
 }
 

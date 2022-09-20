@@ -8,7 +8,6 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import it.uniroma3.siw.spring.model.Accessorio;
 import it.uniroma3.siw.spring.model.Sport;
 import it.uniroma3.siw.spring.repository.SportRepository;
 
@@ -56,16 +55,16 @@ public class SportService {
 		return this.sportRepository.existsByNome(sport.getNome());
 	}
 	
-	@Transactional
-	public void addAccessorio(Sport sport, Accessorio accessorio) {
-		sport.addAccessorio(accessorio);
-		sportRepository.save(sport);
-	}
-	
-	@Transactional
-	public void removeAccessorioFromSport(Sport sport, Accessorio accessorio) {
-		sport.removeAccessorio(accessorio);
-	}
+//	@Transactional
+//	public void addAccessorio(Sport sport, Accessorio accessorio) {
+//		sport.addAccessorio(accessorio);
+//		sportRepository.save(sport);
+//	}
+//	
+//	@Transactional
+//	public void removeAccessorioFromSport(Sport sport, Accessorio accessorio) {
+//		sport.removeAccessorio(accessorio);
+//	}
 	
 	@Transactional
 	public List<Sport> findSportNonNelPacchetto(List<Sport> sportPresenti) {
