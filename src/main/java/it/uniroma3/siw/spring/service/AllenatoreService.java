@@ -73,4 +73,8 @@ public class AllenatoreService {
 	public Allenatore createAllenatore() {
 		return new Allenatore();
 	}
+
+	public Long getNumeroAllenatori() {
+		return this.allenatoreRepository.count();
+	}
 }
