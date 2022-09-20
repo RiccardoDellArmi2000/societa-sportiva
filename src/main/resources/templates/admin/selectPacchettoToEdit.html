@@ -13,7 +13,7 @@
 		<header th:replace="fragments/base.html :: intestazione"></header>	
 		
 		<div id="container">
-			<div><h1>Selezione un pacchetto da modificare</h1></div>
+			<span><h1>Seleziona un pacchetto da modificare</h1></span>
 			<div id="section">
 				<ul id="elenco">
 					<li th:each="pacchetto: ${pacchetti}">
@@ -23,8 +23,7 @@
 					   		<a th:href="@{'/admin' + '/editPacchetto' + '/' + ${pacchetto.id}}"><span id="select">Modifica</span></a>
 					   	</span>
 					</li>	   	
-				</ul>
-				<img src="/images/allenatore.jpg"></img>
+				</ul><img src="/images/allenatore.jpg"></img>
 			</div>
 		</div>
 	</body>

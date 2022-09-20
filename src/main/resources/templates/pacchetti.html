@@ -13,18 +13,17 @@
 		<header th:replace="fragments/base.html :: intestazione"></header>		
 		
 		<div id="container">
-			<div th:if="${allenatore != null}"><h1>Pacchetti dell'allenatore <span th:text="${allenatore.nome} + ' ' + ${allenatore.cognome}"></span></h1></div>
+			<div th:if="${allenatore != null}"><h1>Pacchetti dell'allenatore: <span th:text="${allenatore.nome} + ' ' + ${allenatore.cognome}"></span></h1></div>
 			<div th:if="${allenatore == null}"><h1>I nostri Pacchetti</h1></div>
 			<div id="section">
 					<ul id="elenco">
-						<li th:each="pacchetto: ${pacchetti}">
 							<li th:each="pacchetto : ${pacchetti}"><a href="#"
 							th:href="@{'/pacchetto' + '/' + ${pacchetto.id}}"
 							th:text="${pacchetto.nome}">Premium</a>
 						</li>	   	
 					</ul>
-				<img src="/images/pacchetto2.jpg"></img>
 			</div>
+			<img src="/images/pacchetto2.jpg"></img>
 		</div>
 	</body>
 
